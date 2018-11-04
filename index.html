@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bai+Jamjuree|Gothic+A1|Merriweather+Sans|Muli|News+Cycle|Pattaya" rel="stylesheet">
-    <link rel="stylesheet" href="./ProjectStyle.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="ProjectStyle.css">
+    <link rel="stylesheet" href="media_queries.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
         crossorigin="anonymous">
 </head>
@@ -18,18 +20,29 @@
         <div>
             <li><i class="fas fa-wrench"></i> Overferst & Kuhn</li>
         </div>
-        <div>
+        <span class="hamburgerButton"><i class="fa fa-bars"></i></span>
+
+        <div class="boxMenu">
             <li class="changeColor">Home</li>
             <li>The staff</li>
             <li>Services</li>
             <li>Contact</li>
-            <li>&darr; More</li>
+            <li class="more">&darr; More
+              <div class="dropDownMedia">
+                  <a href="#">Blog News</a>
+                  <a href="#">Extras</a>
+                  <a href="#">Media</a>
+              </div>
+            </li>
             <div class="dropDown">
                 <a href="#">Blog News</a>
                 <a href="#">Extras</a>
                 <a href="#">Media</a>
             </div>
-            <li><i class="fas fa-search"></i></li>
+            <li><i class="fas fa-search search"></i>
+              <input type="search" placeholder="Search">
+            </li>
+
         </div>
     </nav>
 
@@ -88,20 +101,20 @@
                 <div>
                     <img class="service_img" src="photos/02_garage.jpg" alt="BMW 750i" />
                     <h2>BMW 750i</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <p class="pServiceBox">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
                     <button class="service_button">Buy car</button>
                 </div>
                 <div>
                     <img class="service_img" src="photos/the-vintage-is-a-mash-of-everything-classic-bmw-1476934339956-1000x667.jpg"
                         alt="BMW 750i" />
                     <h2>BMW 320i</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <p class="pServiceBox">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
                     <button class="service_button">Buy car</button>
                 </div>
                 <div>
                     <img class="service_img" src="photos/90980348.jpg" alt="BMW 750i" />
                     <h2>BMW 325ix</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <p class="pServiceBox">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
                     <button class="service_button">Buy car</button>
                 </div>
             </div>
@@ -131,8 +144,8 @@
                 <button>Send</button>
             </div>
         </div>
-        <h1 class="h1_contact blog">From the Blog</h1>
-        <div class="main_box">
+        <h1 class="h1_contact">From the Blog</h1>
+        <div class="main_box blog">
             <ul class="ul_contact">
                 <li class="border_bottom_active">Mike</li>
                 <li>Chandler</li>

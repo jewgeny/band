@@ -1,0 +1,100 @@
+/* Small devices */
+
+@media only screen and (max-width: 600px) {
+
+  nav{
+    /* display: none; */
+    flex-direction: column;
+    height: 16.5vw;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  nav div:nth-of-type(1){
+   margin-bottom: -3vw;
+  }
+
+  nav div:nth-of-type(1) > li, nav div:nth-of-type(2) > li{
+   font-size: 5vw;
+  }
+
+  nav div:nth-of-type(2){
+    flex-direction: column;
+  }
+
+  .hamburgerButton{
+    display: block;
+    font-size: 5vw;
+  }
+
+ .dropDown{
+   display: none;
+ }
+
+ .more{
+   padding: 0 !important;
+ }
+
+.search{
+  display: flex !important;
+  flex-direction: column !important;
+  margin: 1.5vw 0;
+}
+
+input[type=search] {
+  display:none;
+  height: 5.5vw;
+  margin: 3vw auto;
+  width:50%;
+}
+
+.activeSearch{
+  display: block !important;
+}
+
+ .activeDropDownMedia{
+   display: flex;
+   padding-bottom: 3vw;
+ }
+
+ .dropDownMedia > a{
+   text-decoration: none;
+   background: rgba(0, 0, 0, 0.9);
+ }
+
+ .dropDownMedia > a:hover{
+  background: rgba(0, 0, 0, 0.6);
+ }
+
+ .activeMenu{
+  height:auto;
+  }
+
+  .mediaMenu > li{
+    cursor: pointer;
+  }
+
+  .mediaMenu > li:hover{
+    cursor: pointer;
+    background:rgba(255, 255, 255, 0.5);
+  }
+
+  .three_boxes{
+    flex-direction: column;
+  }
+
+  .three_boxes > div{
+    width: 100%;
+    margin-bottom: 3.5vw;
+  }
+
+  .three_boxes > div:last-of-type{
+    margin-bottom: 0;
+  }
+
+  .service_img{
+    height: 35vw;
+  }
+
+
+  }

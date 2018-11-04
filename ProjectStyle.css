@@ -1,6 +1,7 @@
 *{
    margin: 0;
    padding: 0;
+   /* box-sizing: border-box; */
 }
 
 
@@ -8,12 +9,13 @@
 nav{
   width:100%;
   position: fixed;
+  padding: 0 2vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background: transparent;
   height: 4vw;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.6)
+  background: rgba(0, 0, 0, 0.6);
 }
 nav li {
   font-family: 'Bai Jamjuree', sans-serif;
@@ -22,45 +24,82 @@ nav li {
   text-align:center;
   font-size: 1.75vw;
   list-style: none;
-  height: 100%;
+}
+
+.hamburgerButton{
+  font-size: 2vw;
+  color: white;
+  margin: 0 auto;
+  cursor: pointer;
+  display: none;
+  padding-bottom: 1vw;
 }
 
 .changeColor{
   color:#00ff40;
 }
 
+.search{
+  cursor: pointer;
+}
+
+input[type=search] {
+  padding-left: 1vw;
+  height: 2.5vw;
+  outline: inherit;
+  width:10vw;
+  background:rgba(255, 255, 255, 0.5);
+  border:none;
+  color: white;
+}
 
 nav div:nth-of-type(1) > li{
 font-family: 'Pattaya', sans-serif;
+  padding-left: 2vw;
 }
 
 nav div:nth-of-type(2){
-  display: flex;
-}
-nav div:nth-of-type(2)>li{
-  padding: 0 2vw;
+display: flex;
 
 }
+
+nav div:nth-of-type(2)>li{
+  padding: 0 2vw;
+}
+
+/* nav div:nth-of-type(2)>li:last-of-type{
+  position: relative;
+  right: -2vw;
+} */
+
+.mediaMenu{
+  display: none;
+  flex-direction: column;
+}
+
 nav div:nth-of-type(2)>li:nth-child(-n+5):hover{
   cursor: pointer;
   background:rgba(255, 255, 255, 0.5);
 }
 
-
 .dropDown{
 display: none;
 position: absolute;
-width:9.15vw;
-right: 11.85vw;
+width:9.1vw;
+right: 18.45%;
 top: 4vw;
-padding: 0;
 flex-direction: column;
-background: white;
+background:rgba(255, 255, 255, 0.5);
 border-bottom-left-radius: 3%;
 border-bottom-right-radius: 3%;
 }
 .active{
   display: flex;
+}
+
+.dropDownMedia{
+  display: none;
+  flex-direction: column;
 }
 
 .dropDown > a{
@@ -265,7 +304,7 @@ cursor: pointer;
 }
 
 input{
-  width:43%;
+  width:48%;
   padding: .6vw 1vw;
 }
 
@@ -309,6 +348,7 @@ section:nth-of-type(5){
   justify-content: space-between;
 }
 
+
 .three_boxes > div{
   display: flex;
   flex-direction: column;
@@ -332,6 +372,11 @@ section:nth-of-type(5){
   width: 30%;
   margin: 1vw auto;
   cursor: pointer;
+}
+
+.pServiceBox{
+  margin-left:.5vw;
+  margin-right: .5vw;
 }
 
  .service_button:hover{

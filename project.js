@@ -5,17 +5,48 @@ let liDrop = document.querySelector(`li:nth-child(+5)`);
 let dropContant = document.querySelector(`.dropDown`);
 let pillButtons = document.querySelectorAll('.ul_contact > li');
 let boxBottom = document.querySelectorAll('.box_bottom');
-let spyScrollLi = document.querySelectorAll(`div:nth-of-type(2)>li:nth-child(-n+4)`)
+let spyScrollLi = document.querySelectorAll(`div:nth-of-type(2)>li:nth-child(-n+4)`);
 let sections = document.querySelectorAll(`section`);
-let firstSection = document.querySelector('section:nth-of-type(1)')
-let lasttSection = document.querySelector('section:nth-of-type(4)')
+let firstSection = document.querySelector('section:nth-of-type(1)');
+let classSection = document.querySelector('section:nth-of-type(3)');
+let lasttSection = document.querySelector('section:nth-of-type(4)');
 let blogNewsLink = document.querySelector('.dropDown > a:nth-of-type(1)');
 let blogNewsSection = document.querySelector('.blog');
 let nav = document.querySelector(`nav`);
+let hamburgerButton = document.querySelector(".hamburgerButton");
 let score = 0;
 let backTopButton = document.querySelector(".backTop");
+let mediaMenu = document.querySelector(".dropDownMedia");
+let searchIcon = document.querySelector(".search");
+let inputSearch = document.querySelector("input[type=search]");
 
+searchIcon.addEventListener("click", function(ev){
+    inputSearch.classList.toggle("activeSearch");
+})
 
+liDrop.addEventListener("click", function(ev){
+  ev.stopPropagation();
+   mediaMenu.classList.toggle("activeDropDownMedia");
+})
+
+//call dropDownMenu
+liDrop.addEventListener(`click`, function (ev) {
+    ev.stopPropagation();
+    dropContant.classList.toggle('active');
+})
+
+//close dropDownMenu by click in the body
+document.body.addEventListener('click', function(){
+    if(dropContant.classList.contains('active')){
+      dropContant.classList.remove('active');
+    }
+})
+
+hamburgerButton.addEventListener("click", function(ev){
+   nav.classList.toggle("activeMenu");
+})
+
+//function for moveDown
 let moveDown = function(item){
  let scrollDownMenu = setInterval(function(){
   window.scrollBy(0, 6);
@@ -25,6 +56,7 @@ let moveDown = function(item){
  },1)
 }
 
+//function for moveUp
 let moveUp = function(item1, item2){
  let scrollDownMenu = setInterval(function(){
   window.scrollBy(0, -6);
@@ -34,14 +66,15 @@ let moveUp = function(item1, item2){
  },1)
 }
 
-blogNewsSection = blogNewsSection.offsetTop - 20;
+//moveDown and moveUp of the blogNewsSection area by clicking the menu point "Blog News"
+blogNewsSection = blogNewsSection.offsetTop - 70;
 blogNewsLink.addEventListener("click", function(ev){
  ev.preventDefault();
  moveDown(blogNewsSection);
- return;
+ moveUp(blogNewsSection, classSection);
 })
 
-
+//moveDown and moveUp of the specific section area by clicking the menu
 for(let i = 0; i < spyScrollLi.length; i++){
   spyScrollLi[i].addEventListener("click", function(ev){
    ev.preventDefault();
@@ -51,7 +84,7 @@ for(let i = 0; i < spyScrollLi.length; i++){
   })
 }
 
-
+//back to the top of the page
 backTopButton.addEventListener("click", function(){
   let scrollUp = setInterval(function(){
     window.scrollBy(0, -5);
@@ -61,7 +94,7 @@ backTopButton.addEventListener("click", function(){
   }, 1);
 })
 
-
+//scroll spy
 window.addEventListener(`scroll`, function (ev) {
     let heightToExecute = nav.clientHeight + 250;
     for (let i = 0; i < sections.length; i++) {
@@ -79,19 +112,7 @@ window.addEventListener(`scroll`, function (ev) {
 })
 
 
-liDrop.addEventListener(`click`, function (ev) {
-    ev.stopPropagation();
-    dropContant.classList.toggle('active');
-})
-
-document.body.addEventListener('click', function(){
-    if(dropContant.classList.contains('active')){
-      dropContant.classList.remove('active');
-    }
-})
-
-
-
+//News from the Blog
 for(let n = 0; n < pillButtons.length; n++ ){
     pillButtons[n].addEventListener('click', function(ev){
       ev.preventDefault();
@@ -107,6 +128,7 @@ for(let n = 0; n < pillButtons.length; n++ ){
     })
 }
 
+//right arrow of the carousel
 rightArrow.addEventListener(`click`, function (ev) {
     score++;
     if (score === images.length) {
@@ -117,6 +139,7 @@ rightArrow.addEventListener(`click`, function (ev) {
     }
 })
 
+//left arrow of the carousel
 leftArrow.addEventListener(`click`, function (ev) {
     score--;
     if (score < 0) {
