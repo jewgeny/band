@@ -10,7 +10,7 @@ let sections = document.querySelectorAll(`section`);
 let firstSection = document.querySelector('section:nth-of-type(1)');
 let classSection = document.querySelector('section:nth-of-type(3)');
 let lasttSection = document.querySelector('section:nth-of-type(4)');
-let blogNewsLink = document.querySelector('.dropDown > a:nth-of-type(1)');
+let blogNewsLink = document.querySelector('.dropDownMedia > a:nth-of-type(1)');
 let blogNewsSection = document.querySelector('.blog');
 let nav = document.querySelector(`nav`);
 let hamburgerButton = document.querySelector(".hamburgerButton");
@@ -20,28 +20,26 @@ let mediaMenu = document.querySelector(".dropDownMedia");
 let searchIcon = document.querySelector(".search");
 let inputSearch = document.querySelector("input[type=search]");
 
+
+//open input search field by media querie
 searchIcon.addEventListener("click", function(ev){
     inputSearch.classList.toggle("activeSearch");
 })
 
+//open dropDown Menu
 liDrop.addEventListener("click", function(ev){
   ev.stopPropagation();
    mediaMenu.classList.toggle("activeDropDownMedia");
 })
 
-//call dropDownMenu
-liDrop.addEventListener(`click`, function (ev) {
-    ev.stopPropagation();
-    dropContant.classList.toggle('active');
-})
-
 //close dropDownMenu by click in the body
 document.body.addEventListener('click', function(){
-    if(dropContant.classList.contains('active')){
-      dropContant.classList.remove('active');
+    if(mediaMenu.classList.contains('activeDropDownMedia')){
+      mediaMenu.classList.remove('activeDropDownMedia');
     }
 })
 
+//open media querie menu
 hamburgerButton.addEventListener("click", function(ev){
    nav.classList.toggle("activeMenu");
 })
@@ -67,7 +65,7 @@ let moveUp = function(item1, item2){
 }
 
 //moveDown and moveUp of the blogNewsSection area by clicking the menu point "Blog News"
-blogNewsSection = blogNewsSection.offsetTop - 70;
+blogNewsSection = blogNewsSection.offsetTop - 170;
 blogNewsLink.addEventListener("click", function(ev){
  ev.preventDefault();
  moveDown(blogNewsSection);

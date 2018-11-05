@@ -27,12 +27,10 @@
     font-size: 5vw;
   }
 
- .dropDown{
-   display: none;
- }
 
  .more{
    padding: 0 !important;
+   width:100% !important;
  }
 
 .search{
@@ -52,10 +50,9 @@ input[type=search] {
   display: block !important;
 }
 
- .activeDropDownMedia{
-   display: flex;
-   padding-bottom: 3vw;
- }
+.dropDownMedia {
+  margin: 0 !important;
+}
 
  .dropDownMedia > a{
    text-decoration: none;
