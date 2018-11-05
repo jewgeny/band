@@ -6,6 +6,10 @@
 
 
 /*navbar*/
+
+.logo{
+  text-decoration: none;
+}
 nav{
   width:100%;
   position: fixed;
@@ -156,7 +160,7 @@ padding-left: .5vw;
 /*headers*/
 h1{
 text-transform: uppercase;
-font-size: 2vw;
+font-size: 5vw;
 font-family: 'Merriweather Sans', sans-serif;
 }
 
@@ -211,7 +215,7 @@ tr td span{
   float:right;
   width: .8vw;
   height: .8vw;
-  padding: .4vw;
+  padding: 1vw;
   border-radius: 50%;
   background: #313334;
 }
@@ -241,9 +245,9 @@ font-family: 'News Cycle', sans-serif;
   justify-content: space-between;
 }
 
-.p_contact{
+/* .p_contact{
   color: #313334;
-}
+} */
 
 .contact_left ul{
   list-style-type: none;
@@ -254,7 +258,7 @@ font-family: 'News Cycle', sans-serif;
 .contact_left ul li{
   padding: .5vw 0;
   font-family: 'Merriweather Sans', sans-serif;
-  color: #313334;
+  color: gray;
 }
 
 .contact_right span{
@@ -301,7 +305,7 @@ cursor: pointer;
 
 .border_bottom_active{
   border: 1px solid gray;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid transparent;
   background: white;
   z-index: 1;
 }

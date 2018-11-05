@@ -1,6 +1,6 @@
 /* Small devices */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
 
   nav{
     /* display: none; */
@@ -26,7 +26,6 @@
     display: block;
     font-size: 5vw;
   }
-
 
  .more{
    padding: 0 !important;
@@ -60,7 +59,7 @@ input[type=search] {
  }
 
  .dropDownMedia > a:hover{
-  background: rgba(0, 0, 0, 0.6);
+  background: green;
  }
 
  .activeMenu{
@@ -91,6 +90,56 @@ input[type=search] {
 
   .service_img{
     height: 35vw;
+  }
+
+  .main_box_contact{
+    flex-direction: column;
+  }
+
+  .three_boxes > div h2{
+    font-size: 3.5vw;
+  }
+
+  input{
+    width:100% !important;
+    margin: 1vw 0;
+  }
+
+  .contact_left ul{
+    margin-bottom: 2vw;
+  }
+
+  textarea::placeholder{
+    font-size: 3vw;
+  }
+
+  .contact_left ul li{
+    font-size: 3vw;
+  }
+
+  .contact_right{
+    width:100%;
+  }
+
+  .contact_right span{
+  flex-direction: column;
+  }
+
+  .bmw_325{
+    padding: 2.5vw;
+  }
+
+  .ul_contact li{
+  font-size: 3.5vw;
+
+  }
+
+  .h1_contact{
+    margin: 6vw 0 !important;
+  }
+
+  .backTop{
+    font-size:10vw !important;
   }
 
 
