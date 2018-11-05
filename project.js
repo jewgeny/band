@@ -2,7 +2,6 @@ let images = document.querySelectorAll(`.home > img`);
 let leftArrow = document.querySelector(`span.left`);
 let rightArrow = document.querySelector(`span.right`);
 let liDrop = document.querySelector(`li:nth-child(+5)`);
-let dropContant = document.querySelector(`.dropDown`);
 let pillButtons = document.querySelectorAll('.ul_contact > li');
 let boxBottom = document.querySelectorAll('.box_bottom');
 let spyScrollLi = document.querySelectorAll(`div:nth-of-type(2)>li:nth-child(-n+4)`);
