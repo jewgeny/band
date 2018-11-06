@@ -2,145 +2,140 @@
 
 @media only screen and (max-width: 500px) {
 
-  nav{
-    /* display: none; */
-    flex-direction: column;
-    height: 16.5vw;
-    overflow: hidden;
-    padding: 0;
-  }
+        nav{
+          /* display: none; */
+          flex-direction: column;
+          height: 16.5vw;
+          overflow: hidden;
+          padding: 0;
+        }
 
-  nav div:nth-of-type(1){
-   margin-bottom: -3vw;
-  }
+        nav div:nth-of-type(1){
+         margin-bottom: -3vw;
+        }
 
-  nav div:nth-of-type(1) > li, nav div:nth-of-type(2) > li{
-   font-size: 5vw;
-  }
+        nav div:nth-of-type(1) > li, nav div:nth-of-type(2) > li{
+         font-size: 5vw;
+        }
 
-  nav div:nth-of-type(2){
-    flex-direction: column;
-  }
+        nav div:nth-of-type(2){
+          flex-direction: column;
+        }
 
-  .hamburgerButton{
-    display: block;
-    font-size: 5vw;
-  }
+        .hamburgerButton{
+          display: block;
+          font-size: 5vw;
+        }
 
- .more{
-   padding: 0 !important;
-   width:100% !important;
- }
+       .more{
+         width:100% !important;
+         margin-bottom: 2vw;
+       }
 
-.search{
-  display: flex !important;
-  flex-direction: column !important;
-  margin: 1.5vw 0;
-}
+      .search{
+        flex-direction: column;
+      }
 
-input[type=search] {
-  display:none;
-  height: 5.5vw;
-  margin: 3vw auto;
-  width:50%;
-}
+      input[type=search] {
+        display:none;
+        height: 5.5vw;
+        margin: 3vw auto;
+        width:50%;
+      }
 
-.activeSearch{
-  display: block !important;
-}
+      .home span{
+       font-size: 10vw;
+       padding: 0 6vw;
 
-.dropDownMedia {
-  margin: 0 !important;
-}
+      }
+       .activeSearch{
+        display: block !important;
+      }
 
- .dropDownMedia > a{
-   text-decoration: none;
-   background: rgba(0, 0, 0, 0.9);
- }
+      .inner img{
+       height: 30vw;
+       margin: 0 8vw;
+      }
 
- .dropDownMedia > a:hover{
-  background: green;
- }
+       .dropDownMedia > a{
+         text-decoration: none;
+         background: rgba(0, 0, 0, 0.9);
+       }
 
- .activeMenu{
-  height:auto;
-  }
+       .dropDownMedia > a:hover{
+        background: green;
+       }
 
-  .mediaMenu > li{
-    cursor: pointer;
-  }
+       .activeMenu{
+        height:auto;
+        }
 
-  .mediaMenu > li:hover{
-    cursor: pointer;
-    background:rgba(255, 255, 255, 0.5);
-  }
+        .three_boxes{
+          flex-direction: column;
+        }
 
-  .three_boxes{
-    flex-direction: column;
-  }
+        .three_boxes > div{
+          width: 100%;
+          margin-bottom: 3.5vw;
+        }
 
-  .three_boxes > div{
-    width: 100%;
-    margin-bottom: 3.5vw;
-  }
+        .three_boxes > div:last-of-type{
+          margin-bottom: 0;
+        }
 
-  .three_boxes > div:last-of-type{
-    margin-bottom: 0;
-  }
+        .service_img{
+          height: 35vw;
+        }
 
-  .service_img{
-    height: 35vw;
-  }
+        .main_box_contact{
+          flex-direction: column;
+        }
 
-  .main_box_contact{
-    flex-direction: column;
-  }
+        .three_boxes > div h2{
+          font-size: 3.5vw;
+        }
 
-  .three_boxes > div h2{
-    font-size: 3.5vw;
-  }
+        input{
+          width:100% !important;
+          margin: 1vw 0;
+        }
 
-  input{
-    width:100% !important;
-    margin: 1vw 0;
-  }
+        .contact_left ul{
+          margin-bottom: 2vw;
+        }
 
-  .contact_left ul{
-    margin-bottom: 2vw;
-  }
+        textarea::placeholder{
+          font-size: 3vw;
+        }
 
-  textarea::placeholder{
-    font-size: 3vw;
-  }
+        .contact_left ul li{
+          font-size: 3vw;
+        }
 
-  .contact_left ul li{
-    font-size: 3vw;
-  }
+        .contact_right{
+          width:100%;
+        }
 
-  .contact_right{
-    width:100%;
-  }
+        .contact_right span{
+        flex-direction: column;
+        }
 
-  .contact_right span{
-  flex-direction: column;
-  }
+        .bmw_325{
+          padding: 2.5vw;
+        }
 
-  .bmw_325{
-    padding: 2.5vw;
-  }
+        .ul_contact li{
+        font-size: 3.5vw;
 
-  .ul_contact li{
-  font-size: 3.5vw;
+        }
 
-  }
+        .h1_contact{
+          margin: 6vw 0 !important;
+        }
 
-  .h1_contact{
-    margin: 6vw 0 !important;
-  }
-
-  .backTop{
-    font-size:10vw !important;
-  }
+        .backTop{
+          font-size:10vw !important;
+        }
 
 
   }

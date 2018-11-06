@@ -9,6 +9,7 @@
 
 .logo{
   text-decoration: none;
+  color: white;
 }
 nav{
   width:100%;
@@ -136,27 +137,6 @@ padding-left: .5vw;
   color: white;
 }
 
-
-/* nav div:nth-of-type(2)>li:last-of-type{
-  width:2.5vw;
-} */
-
-/* .dropDown>a:nth-of-type(1):hover{
-  background:rgb(0, 138,201);
-   color: white;
-}
-.dropDown>a:nth-of-type(2):hover{
-
-  background:rgb(43, 19, 90);
-  color: white;
-}
-.dropDown>a:nth-of-type(3):hover{
-  background: rgb(241, 26,34);
-   color: white;
-} */
-
-
-
 /*headers*/
 h1{
 text-transform: uppercase;
@@ -224,6 +204,7 @@ tr td span{
 p{
  margin: 1.5vw 0;
 font-family: 'News Cycle', sans-serif;
+font-size: 18px;
 }
 
 .p_services{
@@ -244,10 +225,6 @@ font-family: 'News Cycle', sans-serif;
   flex-direction: row;
   justify-content: space-between;
 }
-
-/* .p_contact{
-  color: #313334;
-} */
 
 .contact_left ul{
   list-style-type: none;
@@ -414,13 +391,6 @@ section:nth-of-type(5){
 background: #313334;
 }
 
-
-
-/* @keyframes slideShow {
-0% {transform: translate(-600%, 0);}
-100% {transform: translate(0, 0);}
-} */
-
 /* home */
 .home {
  position: relative;
@@ -441,6 +411,14 @@ background: #313334;
  /* animation: slideShow 20s linear 1s infinite; */
 }
 
+.imgName{
+   cursor: pointer;
+}
+
+.imgName:hover{
+   filter: grayscale(90%);
+}
+
 .home span{
  width: 5%;
  height: 100%;
@@ -456,6 +434,7 @@ background: #313334;
  cursor: pointer;
  background: rgba(0, 0, 0, 0.4)
 }
+
 .right{
  right:0;
  color:#00ff40;
@@ -464,6 +443,7 @@ background: #313334;
    color:#00ff40;
 }
 
+/*the staff*/
 .inner{
   display: flex;
   justify-content: space-around;
@@ -475,6 +455,17 @@ background: #313334;
  border-radius: 50%;
  flex-shrink: 0;
 }
+
+
+.inner p{
+  opacity: 0;
+  font-size: 15px;
+}
+
+.inner .pName_active{
+  opacity: 1;
+}
+
 .theStaff > p{
   width: 80vw;
 }

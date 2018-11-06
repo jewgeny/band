@@ -18,6 +18,33 @@ let backTopButton = document.querySelector(".backTop");
 let mediaMenu = document.querySelector(".dropDownMedia");
 let searchIcon = document.querySelector(".search");
 let inputSearch = document.querySelector("input[type=search]");
+let pName = document.querySelectorAll(".inner p");
+let imgName = document.querySelectorAll(".imgName");
+
+
+
+//show paragraphs under the images
+for(let z = 0; z < imgName.length; z++){
+     imgName[z].addEventListener("mouseover", function(ev){
+        for(let i = 0; i < pName.length; i++){
+                 console.log(pName[i]);
+          if(pName[i].classList.contains("pName_active")){
+            pName[i].classList.remove("pName_active");
+          }
+        }
+        pName[z].classList.toggle("pName_active");
+     })
+}
+
+//show paragraphs under the images
+for(let m = 0; m < pName.length; m++){
+imgName[m].addEventListener("mouseleave", function(ev){
+       if(pName[m].classList.contains("pName_active")){
+        pName[m].classList.remove("pName_active");
+   }
+ })
+}
+
 
 
 //open input search field by media querie
@@ -125,6 +152,19 @@ for(let n = 0; n < pillButtons.length; n++ ){
     })
 }
 
+
+//automatic carousel
+let sliderDinamico = function() {
+  score++
+  if(score === images.length -1){
+     score = 0;
+  }
+  for (let i = 0; i < images.length; i++) {
+    images[i].style.transform = `translate(${score *-100}%, 0)`;
+  }
+}
+let intervalCarousel = setInterval(sliderDinamico, 4000);
+
 //right arrow of the carousel
 rightArrow.addEventListener(`click`, function (ev) {
     score++;
@@ -134,6 +174,7 @@ rightArrow.addEventListener(`click`, function (ev) {
     for (let i = 0; i < images.length; i++) {
         images[i].style.transform = `translate(${score * -100}%,0)`;
     }
+   clearInterval(intervalCarousel);
 })
 
 //left arrow of the carousel
@@ -145,4 +186,6 @@ leftArrow.addEventListener(`click`, function (ev) {
     for (let i = 0; i < images.length; i++) {
         images[i].style.transform = `translate(${score * -100}%,0)`;
     }
+
+    clearInterval(intervalCarousel);
 })
